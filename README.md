@@ -2,7 +2,7 @@
 Activate virtual environment (venv) in project
 For Mac/Linux
 ```bash
-source/env activate
+. source/env/activate
 ```
 
 Use pip package manager to install all dependcies that have been stored in requirements.txt
