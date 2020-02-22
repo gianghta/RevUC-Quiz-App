@@ -11,4 +11,4 @@ def test_page():
     return render_template('test-page.html')
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True, port=3000)
