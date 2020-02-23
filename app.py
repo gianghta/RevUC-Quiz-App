@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, session, url_for
 from flask_session import Session
 import random
 from cs50 import SQL
-from sqlite3 import Error
+
 from random_quiz import generate_test, get_question, shuffle_question_order
 
 app = Flask(__name__)
@@ -30,7 +30,7 @@ def update_numpassed(username, num_passed):
 def new_acc(username, password):
     db.execute("INSERT INTO userbase (username, password, score, num_passed) VALUES (?, ?, 0, 0)", username, password)
 
-user = ""
+username = ""
 password = ""
 
 
@@ -108,43 +108,40 @@ def play():
         country, correct_city = splitted[0].split(",")
         choices = splitted[1].strip().split(",")[0:-1]
 
-        correct = request.args.get("cor")
+        
+        cor = request.args.get("cor")
         country_previous = request.args.get("country")
-        if correct and country_previous:
-            result = "CORRECT" if correct == "true" else "WRONG"
+        
+        if cor and country_previous:
+            result_ans = ""
+            result_ans = "CORRECT" if cor == "true" else "WRONG"
             return render_template('play.html', 
-                                country = country_previous, 
-                                choices = choices, 
-                                score = session["score"],
-                                result = result,
-                                input_disabled="true")
+                                    country = country_previous, 
+                                    choices = choices, 
+                                    score = session["score"],
+                                    result = result_ans,
+                                    input_disabled="true")
         
         else:
-        # Display question and 4 answer choice   
+        # Display question and 4 answer choice  
+            
             return render_template('play.html', 
                                 country = country, 
-                                choices = choices,
-                                score = session["score"], 
-                                result="",
+                                choices = choices, 
+                                score = session["score"],
+                                result = "",
                                 input_disabled="false")
+    return render_template('index.html')
 
     
-"""@app.route('/check', methods=["GET", "POST"])
-def check():
-    choice = request.args.get("choice")
-    country = request.args.get("country")
-    if request.method == "POST":
-        if choice == capitals[country]:
-            return redirect(f"/true?country={country}")
-        else:
-            return redirect(f"/false?country={country}")"""
 
 
 @app.route('/check', methods=["GET", "POST"])
 def check():
-    choice_and_country = request.form.get("choice")
-    choice, country = choice_and_country.split(",")
     if request.method == "POST":
+        choice_and_country = request.form.get("choice")
+        choice, country = choice_and_country.split(",")
+    
         if choice == capitals[country]:
             session["score"] += 100
             update_score(username, session["score"])
