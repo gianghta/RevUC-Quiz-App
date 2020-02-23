@@ -1,7 +1,7 @@
-What is the capital of USA?\nVienna\nHanoi\nWashington D.C\nBeijing\n
-What is the capital of Vietnam?\nHanoi\nTokyo\nJakarta\nBeijing\n
-What is the capital of Japan?\nTokyo\nBerlin\nHanoi\nVienna\n
-What is the capital of England?\nHanoi\nVienna\nTokyo\nBerlin\n
-What is the capital of Austria?\nWashington D.C\nBerlin\nVienna\nHanoi\n
-What is the capital of Indonesia?\nBeijing\nTokyo\nHanoi\nJakarta\n
-What is the capital of China?\nBeijing\nWashington D.C\nBerlin\nTokyo\n
+USA,Washington D.C*Washington D.C,Hanoi,Jakarta,Tokyo,
+Vietnam,Hanoi*Tokyo,Vienna,Hanoi,Beijing,
+Japan,Tokyo*Hanoi,Jakarta,Tokyo,Vienna,
+England,Berlin*Washington D.C,Berlin,Beijing,Jakarta,
+Austria,Vienna*Hanoi,Berlin,Jakarta,Vienna,
+Indonesia,Jakarta*Jakarta,Beijing,Vienna,Washington D.C,
+China,Beijing*Washington D.C,Vienna,Berlin,Beijing,
