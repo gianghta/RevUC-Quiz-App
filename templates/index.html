@@ -65,12 +65,13 @@
 
       <div class = "question" style = "margin-top: 50px; margin-right: 50px;">
       	<h1 style="font-size: 20px;"> Here's your question: </h1>
-
-      	<ol>What's the capital of (country)?</ol>
-      	<li class = "capital"><button class = "capital">Capital 1</button></li>
-      	<li class = "capital"><button class = "capital">Capital 2</button></li>
-      	<li class = "capital"><button class = "capital">Capital 3</button></li>
-      	<li class = "capital"><button class = "capital">Capital 4</button></li>
+        
+        <ol>What's the capital of {{ country }}?</ol>
+        {% for choice in choices %}
+        <!-- 4 choice total in choices list ==> 4 buttons -->
+        <li class = "capital"><button class = "capital">{{ choice }}</button></li>
+        {% endfor %}
+      	
 
         <h2> What could it be?</h2>
         <h3> Your answer is (Correct/Incorrect)</h3>
