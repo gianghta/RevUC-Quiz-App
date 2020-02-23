@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+  {% block content %}
+
+  <h1>Congrats. You finished all questions</h1>
+  <p>Your score is {{score}}</p>
+
+<form action="./endgame" method="post">
+    <button type="submit" name='logout' value='logout'>Click here to log out</button>
+    <button type="submit" name='reset' value='reset'>Click here to reset and play again</button>
+</form>
+    
+  {% endblock %}

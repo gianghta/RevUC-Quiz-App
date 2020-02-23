@@ -1,7 +1,7 @@
 USA, Washington D.C
 Vietnam, Hanoi
 Japan, Tokyo
-England, Berlin
+Germany, Berlin
 Austria, Vienna
 Indonesia, Jakarta
 China, Beijing

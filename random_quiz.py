@@ -1,10 +1,14 @@
 import random
 
+
+# Initialize a capital dictionary
+
+
+
 def generate_test(data_path, result_path, num_choice):
     test_data = open(data_path, "r")
     questions = open(result_path, "w")
 
-    # Initialize a capital dictionary
     capitals = {}
 
     # Read form test data and save to dictionary     
@@ -53,10 +57,21 @@ def generate_test(data_path, result_path, num_choice):
     test_data.close()
     questions.close()
 
+    return capitals
 
-def change_to_html(text):
-    text = text.replace("\\n", "<br>")
-    return text
+
+def file_len(file_path):
+    with open(file_path) as f:
+        for i, l in enumerate(f):
+            pass
+    return i + 1
+
+
+def shuffle_question_order(question_path):
+    length = file_len(question_path)
+    order = list(range(length))
+    random.shuffle(order)
+    return order
 
 
 def check_and_continue(choice, correct_choice):
@@ -67,6 +82,7 @@ def check_and_continue(choice, correct_choice):
 def get_question(questions_bank_path, question_num):
     with open(questions_bank_path) as questions:
         return questions.readlines()[question_num]
+
 
 if __name__ == "__main__":
     number = 1
@@ -79,5 +95,4 @@ if __name__ == "__main__":
     splitted = question.split("*")
     country, correct_city = splitted[0].split(",")
     choices = splitted[1].strip().split(",")[0:-1]
-    print(correct_city)
-    
+    order = shuffle_question_order("questions.txt")
