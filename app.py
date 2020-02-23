@@ -17,4 +17,4 @@ def test_page():
     return render_template('play.html')
 
 if __name__ == "__main__":
-    app.run(debug=True, TEMPLATES_AUTO_RELOAD=True)
+    app.run(debug=True)

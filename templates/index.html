@@ -20,32 +20,49 @@
     
   }
   div.question {
-  	width: 300px;
+  	width: 500px;
   	height: 300px;
   	border: 1px solid #3399ff;
     border-radius: 5px;
     background-color:white;
     margin-left: 50px;
+    float:left;
   }
 
 
   div.score{
+    margin-top:50px;
     width: 300px;
-    height: 150px;
+    height: 120px;
     border: 1px solid #3399ff;
     border-radius: 5px;
     background-color:white;
-    margin-left: 50px;
-    margin-top: 20px;
-    float: left;
+    float: right;
+    margin-right:50px;
+  }
+
+  div.board{
+    width: 300px;
+    height: 160px;
+    border: 1px solid #3399ff;
+    border-radius: 5px;
+    background-color:white;
+    float: right;
+    margin-right:50px;
+    margin-top:20px;
   }
 
   li.capital {
-  	list-style-type: upper-alpha;
-    margin-left:20px;
+    list-style-type: none;
+    margin-left:30px;
   }
+
+  ul#horizontal li{
+  display:inline;
+}
   button.capital {
   	border: 1px solid #3399ff;
+    height:50px;
   	border-radius: 5px;
   	width: 150px;
   	margin-top: 5px;
@@ -54,6 +71,43 @@
   button.capital:hover{
   	background-color:#ccffff;
   }
+
+  ol.board {
+  text-align:center;
+  font-size: 30px;
+  margin-right:20px;
+}
+
+li.board {
+  font-size: 20px;
+
+}
+div.info{
+  width:865px;
+  height:200px;
+  border: 1px solid #3399ff;
+  float: left;
+  margin-top: 15px;
+  border-radius: 5px;
+  background-color:white;
+  margin-left: 50px;
+}
+div.fact{
+  width:600px;
+  height:200px;
+  border: 1px solid #3399ff;
+  border-radius: 5px;
+  background-color:white;
+  float: left;
+}
+div.flag{
+  width:250px;
+  height:200px;
+  border: 1px solid #3399ff;
+  border-radius: 5px;
+  background-color:white;
+  float: right;
+}
 
   {% endblock %}
 
@@ -65,12 +119,16 @@
 
       <div class = "question" style = "margin-top: 50px; margin-right: 50px;">
       	<h1 style="font-size: 20px;"> Here's your question: </h1>
+        <h2> What's the capital of (country)? </h2>
 
-      	<ol>What's the capital of (country)?</ol>
-      	<li class = "capital"><button class = "capital">Capital 1</button></li>
-      	<li class = "capital"><button class = "capital">Capital 2</button></li>
-      	<li class = "capital"><button class = "capital">Capital 3</button></li>
-      	<li class = "capital"><button class = "capital">Capital 4</button></li>
+      	<ul id = "horizontal">
+            <li class = "capital"><button class = "capital">Capital 1</button></li>
+            <li class = "capital"><button class = "capital">Capital 2</button></li>
+         </ul>
+         <ul id = "horizontal">
+            <li class = "capital"><button class = "capital">Capital 3</button></li>
+            <li class = "capital"><button class = "capital">Capital 4</button></li>
+         </ul>
 
         <h2> What could it be?</h2>
         <h3> Your answer is (Correct/Incorrect)</h3>
@@ -79,8 +137,27 @@
       </div>
 
       <div class = "score">
-        <h1> YOUR SCORE: </h1>
-        <l1 style = "font-size: 30px;"> 12345 </l1>
+        <h1 style="font-size: 35px;"> YOUR SCORE: </h1>
+        <h2 style = "font-size: 30px; text-align: center;"> 12345 </h2>
+      </div>
+      <div class = "board">
+        <ol class = "board"> Leaderboard
+          <li class = "board"> Person1 </li>
+          <li class = "board"> Person2 </li>
+          <li class = "board"> Person3 </li>
+        </ol>
+      </div>
+      <div class = "info">
+        <div class = "fact">
+          <h1 style="text-align: left; margin-left: 20px; font-size: 30px;">Country</h1>
+          <l1 style="margin-left: 15px;">fact about country <br></l1>
+          <l2 style="margin-left: 15px;">fact about country <br></l2>
+          <l3 style="margin-left: 15px;">fact about country <br></l3>
+          <l4 style="margin-left: 15px;">fact about country <br></l4>
+        </div>
+          <div class = "flag">
+            <l1> flag image </l1>
+          </div>
 
       </div>
   {% endblock %}
