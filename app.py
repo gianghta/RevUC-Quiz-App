@@ -23,7 +23,7 @@ def index():
 
 
 @app.route('/play')
-def test_page():
+def play_page():
     return render_template('play.html')
 
 if __name__ == "__main__":
