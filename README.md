@@ -1,7 +1,7 @@
 # Quiz App (Geological quiz)
 A Quiz app that we built for questioning users on geology quiz
 
-Try out demo [here] (http://geoquiz-revuc.herokuapp.com/?fbclid=IwAR3SM85OOrKub25GHhKvaljLK7hmw7O0HMwNkXclK4BXrayl1rOUTadeqx8)
+Try out demo [here](http://geoquiz-revuc.herokuapp.com/?fbclid=IwAR3SM85OOrKub25GHhKvaljLK7hmw7O0HMwNkXclK4BXrayl1rOUTadeqx8)
 
 ## Setup
 Activate virtual environment (venv) in project
@@ -69,7 +69,7 @@ $ git branch -d [name_of_your_new_branch]
 
 This project is an effort of 4 members:
 
-* [Bao Huynh] (https://github.com/baohuynhlam)
-* [Triet Pham] (https://github.com/chrispham0502)
-* [Thanh Nguyen] (https://github.com/nhanthanh-bot)
-* [Giang Ta] (https://github.com/gianghta)
+* [Bao Huynh](https://github.com/baohuynhlam)
+* [Triet Pham](https://github.com/chrispham0502)
+* [Thanh Nguyen](https://github.com/nhanthanh-bot)
+* [Giang Ta](https://github.com/gianghta)
