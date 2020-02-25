@@ -1,6 +1,8 @@
 # Quiz App (Geological quiz)
 A Quiz app that we built for questioning users on geology quiz
 
+Try out demo [here] (http://geoquiz-revuc.herokuapp.com/?fbclid=IwAR3SM85OOrKub25GHhKvaljLK7hmw7O0HMwNkXclK4BXrayl1rOUTadeqx8)
+
 ## Setup
 Activate virtual environment (venv) in project
 For Mac/Linux
@@ -62,3 +64,12 @@ $ git branch -d [name_of_your_new_branch]
 ```
 
 * Go to remote repository and make a pull request to merge into the final source code. Remember: **There must be 2 reviewers for the PR to be merged. And don't push to master branch directly**
+
+## Contributors
+
+This project is an effort of 4 members:
+
+* [Bao Huynh] (https://github.com/baohuynhlam)
+* [Triet Pham] (https://github.com/chrispham0502)
+* [Thanh Nguyen] (https://github.com/nhanthanh-bot)
+* [Giang Ta] (https://github.com/gianghta)
