@@ -1,4 +1,4 @@
-# Quiz App (Geological quiz)
+# Quiz App (Geography quiz)
 A Quiz app that we built for questioning users on geology quiz
 
 Try out demo [here](http://geoquiz-revuc.herokuapp.com/?fbclid=IwAR3SM85OOrKub25GHhKvaljLK7hmw7O0HMwNkXclK4BXrayl1rOUTadeqx8)
